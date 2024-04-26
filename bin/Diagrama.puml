@@ -1,0 +1,24 @@
+@startuml Diagrama
+
+class Cliente {
+    - id: int
+    - nome: String
+    - email: String
+    - tel: String
+}
+
+class Produto {
+    - id: int
+    - nome: String
+    - preco: double
+    - quatidade: int
+    + cadastrarProduto(): void
+}
+
+class Pedido {
+    - id: int
+    - cliente: Cliente
+    - produto: Produto
+    - data: Date
+    + adicionarProduto(): void
+}
